@@ -1,14 +1,20 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:route_project/home_screen/home_screen_view.dart';
 import 'package:route_project/splash/splash_screen.dart';
+import 'package:route_project/tabs/profile_screen.dart';
 
 import 'auth/register/sign_up.dart';
 import 'foot_wear.dart';
-import 'home/home_screen.dart';
-import 'home/homee.dart';
+import 'home/login_screen.dart';
+import 'my_bloc_observer.dart';
 import 'my_theme.dart';
+import 'tabs/home_tab/widgets/homee.dart';
 
 void main() {
+  Bloc.observer = MyBlocObserver();
+
   runApp(const MyApp());
 }
 
@@ -25,10 +31,13 @@ class MyApp extends StatelessWidget {
         builder: (context, child) {
           return MaterialApp(
               debugShowCheckedModeBanner: false,
-              initialRoute: SplashScreen.routeName,
+              initialRoute: HomeScreenView.routeName,
               routes: {
                 SplashScreen.routeName: (context) => SplashScreen(),
-                HomeScreen.routeName: (context) => HomeScreen(),
+                ProfileScreen.routeName: (context) => ProfileScreen(),
+                HomeScreenView.routeName: (context) => HomeScreenView(),
+
+                LoginScreen.routeName: (context) => LoginScreen(),
                 SignUp.routeName: (context) => SignUp(),
                 // Add the sign-up route
                 Homee.routeName: (context) => Homee(),
