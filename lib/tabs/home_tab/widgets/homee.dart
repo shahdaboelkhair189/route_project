@@ -17,7 +17,9 @@ class Homee extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocBuilder<HomeTabViewModel, HomeTabStates>(
-      bloc: viewModel..getAllCategories(),
+      bloc: viewModel
+        ..getAllCategories()
+        ..getAllBrands(),
       builder: (context, state) {
         return SafeArea(
           child: Scaffold(
@@ -84,96 +86,31 @@ class Homee extends StatelessWidget {
 //
 //   color: Appcolors.primaryColor,
                     RowSectionWidget(name: 'Categeroies'),
-                    state is HomeTabSuccessState
-                        ? CategoriesBrandsWidget(
-                            list: viewModel.categoriesList!)
-                        : Center(
+                    SizedBox(
+                      height: 20,
+                    ),
+                    state is HomeCategoryLoadingState
+                        ? const Center(
                             child: CircularProgressIndicator(
-                              color: Appcolors.primaryColor,
+                              color: AppColors.primaryColor,
                             ),
-                          ),
+                          )
+                        : CategoriesBrandsWidget(
+                            list: viewModel.categoriesList!),
 
-                    //
-                    // Container(
-                    //   alignment: Alignment.topLeft,
-                    //   // Aligns text to the center horizontally and vertically
-                    //   child: RowSectionWidget(name: 'Categories'),),
-                    // SizedBox(height: 10),
-                    //
-                    //
-                    // Container(
-                    //   width: double.infinity,
-                    //   // Ensures the Container takes full width
-                    //
-                    //   child: Row(
-                    //     mainAxisAlignment: MainAxisAlignment.start,
-                    //     children: [
-                    //       Images(
-                    //           imagePath: 'assets/images/Ellipse 14.png',
-                    //           name: 'Women\'s\nFashion'),
-                    //       Images(
-                    //           imagePath: 'assets/images/Ellipse 15.png',
-                    //           name: '  men \'s\n Fashion'),
-                    //       Images(
-                    //           imagePath: 'assets/images/Ellipse 16.png',
-                    //           name: 'Laptops &\'s\n Electronics'),
-                    //       Images(
-                    //           imagePath: 'assets/images/Ellipse 17.png',
-                    //           name: 'Baby &\n\Toys'),
-                    //     ],
-                    //   ),
-                    // ),
-                    //
-                    // Container(
-                    //   width: double.infinity,
-                    //   // Ensures the Container takes full width
-                    //
-                    //   child: Row(
-                    //     mainAxisAlignment: MainAxisAlignment.start,
-                    //     children: [
-                    //       Images(
-                    //           imagePath: 'assets/images/Ellipse 2.png',
-                    //           name: 'Beauty'),
-                    //       Images(
-                    //           imagePath: 'assets/images/Ellipse 3.png',
-                    //           name: 'Headphones'),
-                    //       Images(
-                    //           imagePath: 'assets/images/Ellipse 1.png',
-                    //           name: 'Skincare'),
-                    //       Images(
-                    //           imagePath: 'assets/images/Ellipse 4.png',
-                    //           name: 'Cameras'),
-                    //     ],
-                    //   ),
-                    // ),
-
-                    Container(
-                      alignment: Alignment.topLeft,
-                      // Aligns text to the center horizontally and vertically
-                      child: Text(
-                        'Home Appliance',
-                        style: TextStyle(
-                            color: Appcolors.searchColor, fontSize: 25),
-                      ),
+                    SizedBox(height: 80),
+                    RowSectionWidget(name: 'Brands'),
+                    SizedBox(
+                      height: 40,
                     ),
-                    Container(
-                      width: double.infinity,
-                      // Ensures the Container takes full width
 
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        children: [
-                          Images(
-                              imagePath: 'assets/images/Frame 9.png', name: ''),
-                          Images(
-                              imagePath: 'assets/images/Frame 14.png',
-                              name: ' '),
-                          Images(
-                              imagePath: 'assets/images/Frame 15.png',
-                              name: ''),
-                        ],
-                      ),
-                    ),
+                    state is HomeBrandLoadingState
+                        ? const Center(
+                            child: CircularProgressIndicator(
+                              color: AppColors.primaryColor,
+                            ),
+                          )
+                        : CategoriesBrandsWidget(list: viewModel.brandsList!)
                   ],
                 ),
               ),

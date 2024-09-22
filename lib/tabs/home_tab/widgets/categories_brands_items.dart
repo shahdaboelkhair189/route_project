@@ -3,7 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import '../../../app_colors.dart';
-import '../../../data/model/response/category_or_brand.dart';
+import '../../../data/model/response/CategoryOrBrandResponse.dart';
 
 class CategoryBrandItems extends StatelessWidget {
   //todo : category or brand model
@@ -16,23 +16,27 @@ class CategoryBrandItems extends StatelessWidget {
     return Column(
       children: [
         Expanded(
-          flex: 8,
-          child: CircleAvatar(
-            backgroundImage: NetworkImage(categoryOrBrand.image ?? ''),
-            radius: 50.r,
+          flex: 90,
+          child: Container(
+            width: 250.w,
+            height: 100.h,
+            child: CircleAvatar(
+              backgroundImage: NetworkImage(categoryOrBrand.image ?? ''),
+              radius: 70.r,
+            ),
           ),
         ),
-        SizedBox(height: 8.h),
+        SizedBox(height: 20.h),
         Expanded(
-            flex: 2,
+            flex: 80,
             child: Text(
               categoryOrBrand.name ?? '',
               textWidthBasis: TextWidthBasis.longestLine,
               textAlign: TextAlign.center,
               style: GoogleFonts.poppins(
-                fontSize: 14.sp,
+                fontSize: 18.sp,
                 fontWeight: FontWeight.bold,
-                color: Appcolors.primaryColor,
+                color: Colors.pinkAccent,
               ),
             ))
       ],

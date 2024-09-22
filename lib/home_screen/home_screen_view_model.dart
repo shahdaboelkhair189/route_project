@@ -4,7 +4,7 @@ import 'package:route_project/home_screen/cubit/home_screen_states.dart';
 
 import '../tabs/favourite_tab/favourite_tab.dart';
 import '../tabs/home_tab/widgets/homee.dart';
-import '../tabs/product_list.dart';
+import '../tabs/home_tab/product_list/product_list.dart';
 import '../tabs/profile_screen.dart';
 
 class HomeScreenViewModel extends Cubit<HomeScreenStates> {

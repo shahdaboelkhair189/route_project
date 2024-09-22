@@ -19,7 +19,7 @@ class RowSectionWidget extends StatelessWidget {
           style: GoogleFonts.poppins(
             fontSize: 18.sp,
             fontWeight: FontWeight.bold,
-            color: Appcolors.primaryColor,
+            color: Colors.pinkAccent,
           ),
         ),
         TextButton(
@@ -29,7 +29,7 @@ class RowSectionWidget extends StatelessWidget {
               style: GoogleFonts.poppins(
                 fontSize: 14,
                 fontWeight: FontWeight.w500,
-                color: Appcolors.primaryColor,
+                color: AppColors.primaryColor,
               ),
             )),
       ],

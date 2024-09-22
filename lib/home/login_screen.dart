@@ -4,7 +4,9 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:route_project/app_colors.dart';
 import 'package:route_project/auth/register/sign_up.dart';
 import 'package:route_project/home/cubit/login_states.dart';
+import 'package:route_project/home_screen/home_screen_view.dart';
 import 'package:route_project/utils/dialog_utils.dart';
+import 'package:route_project/utils/shared_preference.dart';
 
 import 'cubit/login_cubit.dart';
 
@@ -42,10 +44,13 @@ class _HomeScreenState extends State<LoginScreen> {
               content: 'Login Successfully',
               title: 'Success',
               posActionName: 'ok');
+          SharedPreferenceUtils.saveData(
+              key: 'token', value: state.response.token);
+          Navigator.of(context).pushReplacementNamed(HomeScreenView.routeName);
         }
       },
       child: Scaffold(
-        backgroundColor: Appcolors.primaryColor,
+        backgroundColor: AppColors.primaryColor,
         body: Padding(
           padding: const EdgeInsets.all(30.0),
           child: Form(
@@ -157,12 +162,12 @@ class _HomeScreenState extends State<LoginScreen> {
                       style: GoogleFonts.poppins(
                         fontSize: 20,
                         fontWeight: FontWeight.bold,
-                        color: Appcolors.primaryColor,
+                        color: AppColors.primaryColor,
                       ),
                     ),
                     style: ElevatedButton.styleFrom(
                       minimumSize: Size(398, 64),
-                      backgroundColor: Appcolors.whiteColor,
+                      backgroundColor: AppColors.whiteColor,
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(15),
                       ),

@@ -17,11 +17,11 @@ class CategoryWidget extends StatelessWidget {
           children: [
             Image.asset(imagePath),
             Container(
-                margin: EdgeInsets.all(5),
-                padding: EdgeInsets.all(2),
+                margin: EdgeInsets.all(9),
+                padding: EdgeInsets.all(4),
                 child: Text(name,
                     style:
-                        TextStyle(fontSize: 20, color: Appcolors.searchColor)))
+                        TextStyle(fontSize: 20, color: AppColors.searchColor)))
           ],
         ),
       ),

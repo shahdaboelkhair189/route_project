@@ -28,7 +28,7 @@ class CustomTextFormField extends StatelessWidget {
         style: TextStyle(color: Colors.black),
         decoration: InputDecoration(
             labelText: label,
-            labelStyle: TextStyle(color: Appcolors.primaryColor),
+            labelStyle: TextStyle(color: AppColors.primaryColor),
             // Sets the label color to blue
             filled: true,
             // Enables the filled background
@@ -36,10 +36,10 @@ class CustomTextFormField extends StatelessWidget {
             // Sets the fill color to white
             enabledBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(15),
-                borderSide: BorderSide(color: Appcolors.primaryColor)),
+                borderSide: BorderSide(color: AppColors.primaryColor)),
             focusedBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(15),
-                borderSide: BorderSide(color: Appcolors.whiteColor)),
+                borderSide: BorderSide(color: AppColors.whiteColor)),
             errorBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(15),
                 borderSide: BorderSide(color: Colors.red)),

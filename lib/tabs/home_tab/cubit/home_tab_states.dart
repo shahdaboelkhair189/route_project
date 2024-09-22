@@ -1,19 +1,33 @@
-import 'package:route_project/data/model/response/CategoryResponse.dart';
+import 'package:route_project/data/model/response/CategoryOrBrandResponse.dart';
 
 abstract class HomeTabStates {}
 
 class HomeTabInitialState extends HomeTabStates {}
 
-class HomeTabLoadingState extends HomeTabStates {}
+class HomeCategoryLoadingState extends HomeTabStates {}
 
-class HomeTabErrorState extends HomeTabStates {
+class HomeCategoryErrorState extends HomeTabStates {
   String errorMessage;
 
-  HomeTabErrorState({required this.errorMessage});
+  HomeCategoryErrorState({required this.errorMessage});
 }
 
-class HomeTabSuccessState extends HomeTabStates {
-  CategoryResponse categoryResponse;
+class HomeCategorySuccessState extends HomeTabStates {
+  CategoryOrBrandResponse categoryResponse;
 
-  HomeTabSuccessState({required this.categoryResponse});
+  HomeCategorySuccessState({required this.categoryResponse});
+}
+
+class HomeBrandLoadingState extends HomeTabStates {}
+
+class HomeBrandErrorState extends HomeTabStates {
+  String errorMessage;
+
+  HomeBrandErrorState({required this.errorMessage});
+}
+
+class HomeBrandSuccessState extends HomeTabStates {
+  CategoryOrBrandResponse categoryResponse;
+
+  HomeBrandSuccessState({required this.categoryResponse});
 }

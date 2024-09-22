@@ -79,7 +79,7 @@ class FootWear extends StatelessWidget {
 
                 height: 60,
                 decoration: BoxDecoration(
-                  color: Appcolors.primaryColor, // Background color
+                  color: AppColors.primaryColor, // Background color
                   borderRadius: BorderRadius.circular(
                       15), // Half of width/height to make it a circle
                 ),
@@ -93,7 +93,7 @@ class FootWear extends StatelessWidget {
                         },
                         child: Icon(
                           Icons.home_filled,
-                          color: Appcolors.whiteColor,
+                          color: AppColors.whiteColor,
                         ),
                       ),
                     ),
@@ -104,7 +104,7 @@ class FootWear extends StatelessWidget {
                       },
                       child: Icon(
                         Icons.widgets_outlined,
-                        color: Appcolors.whiteColor,
+                        color: AppColors.whiteColor,
                       ),
                     ),
                     SizedBox(width: 100),
@@ -115,7 +115,7 @@ class FootWear extends StatelessWidget {
                         },
                         child: Icon(
                           Icons.favorite_border,
-                          color: Appcolors.whiteColor,
+                          color: AppColors.whiteColor,
                         ),
                       ),
                     ),
@@ -125,7 +125,7 @@ class FootWear extends StatelessWidget {
                         onTap: () {},
                         child: Icon(
                           Icons.person_outline_sharp,
-                          color: Appcolors.whiteColor,
+                          color: AppColors.whiteColor,
                         ),
                       ),
                     ),

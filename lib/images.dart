@@ -18,7 +18,7 @@ class Images extends StatelessWidget {
             margin: EdgeInsets.all(5),
             padding: EdgeInsets.all(2),
             child: Text(name,
-                style: TextStyle(fontSize: 20, color: Appcolors.searchColor)))
+                style: TextStyle(fontSize: 20, color: AppColors.searchColor)))
       ],
     ));
   }

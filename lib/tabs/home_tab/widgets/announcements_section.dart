@@ -19,8 +19,8 @@ class AnnouncmementsSection extends StatelessWidget {
 
     return ImageSlideshow(
       initialPage: 0,
-      indicatorColor: Appcolors.primaryColor,
-      indicatorBackgroundColor: Appcolors.whiteColor,
+      indicatorColor: AppColors.primaryColor,
+      indicatorBackgroundColor: AppColors.whiteColor,
       indicatorBottomPadding: 20.h,
       autoPlayInterval: 3000,
       isLoop: true,

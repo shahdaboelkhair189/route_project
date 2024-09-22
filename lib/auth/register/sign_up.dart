@@ -43,7 +43,7 @@ class _SignUpState extends State<SignUp> {
           }
         },
         child: Scaffold(
-          backgroundColor: Appcolors.primaryColor,
+          backgroundColor: AppColors.primaryColor,
           body: SingleChildScrollView(
             child: Padding(
               padding: const EdgeInsets.all(30.0),
@@ -207,12 +207,12 @@ class _SignUpState extends State<SignUp> {
                           style: GoogleFonts.poppins(
                             fontSize: 20,
                             fontWeight: FontWeight.bold,
-                            color: Appcolors.primaryColor,
+                            color: AppColors.primaryColor,
                           ),
                         ),
                         style: ElevatedButton.styleFrom(
                           minimumSize: Size(398, 64),
-                          backgroundColor: Appcolors.whiteColor,
+                          backgroundColor: AppColors.whiteColor,
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(15),
                           ),
